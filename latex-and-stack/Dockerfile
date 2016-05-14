@@ -1,7 +1,7 @@
 FROM ubuntu:xenial
 
 ENV STACK_DOWNLOAD_URL https://www.stackage.org/stack/linux-x86_64
-ENV DEBIAN_FRONTEND noninteractive
+# ENV DEBIAN_FRONTEND noninteractive
 ENV PATH $PATH:/root/.local/bin
 ENV LANG C.UTF-8
 
