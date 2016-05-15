@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM buildpack-deps:xenial
 
 ENV STACK_DOWNLOAD_URL https://www.stackage.org/stack/linux-x86_64
 # ENV DEBIAN_FRONTEND noninteractive
@@ -6,7 +6,7 @@ ENV PATH $PATH:/root/.local/bin
 ENV LANG C.UTF-8
 
 RUN apt-get update -q && \
-    apt-get install -qy wget tar texlive-full libgmp-dev && \
+    apt-get install -qy texlive-full libgmp-dev && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
