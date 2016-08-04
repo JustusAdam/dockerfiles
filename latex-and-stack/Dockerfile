@@ -6,7 +6,7 @@ ENV PATH $PATH:/root/.local/bin
 ENV LANG C.UTF-8
 
 RUN apt-get update -q && \
-    apt-get install -qy texlive-full libgmp-dev python python-dev && \
+    apt-get install -qy texlive-full libgmp-dev python python-dev python-pip && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
